@@ -1,0 +1,369 @@
+@font-face {
+  font-family: irsans3;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/irsans.eot);
+  src: url(../fonts/irsans.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/irsans.woff) format("woff"),
+    url(../fonts/irsans.ttf) format("truetype");
+}
+
+body {
+  font-family: irsans3;
+  font-size: 1.05rem;
+  overflow: auto;
+}
+
+.header {
+  .options {
+    ul {
+      cursor: pointer;
+      margin-left: auto !important;
+
+      li {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      li:last-child {
+        padding-left: 0px;
+      }
+      li:hover {
+        color: #ff2c57;
+        transition: 0.5s;
+      }
+
+      li a {
+        display: block;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      li a:current {
+        color: #ff2c57;
+        transition: 0.5s;
+      }
+    }
+    ul::selection {
+      color: #ff2c57;
+    }
+
+    .menu_btn {
+      span {
+        background-image: url("../img/sample/download.svg");
+      }
+    }
+  }
+}
+
+.main_banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../assets/img/sample/main-bg-1.jpg");
+}
+
+.card_design:hover {
+  .read_more {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    bottom: 0;
+    background-color: #ff2c57;
+    box-shadow: 4px 1px 10px 2px rgb(0 0 0 / 30%);
+  }
+}
+
+@mixin lines_before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  right: 10px;
+  top: 0;
+  background: #ff2c57;
+  transition: 0.4s;
+}
+
+@mixin lines_after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 50%;
+  right: 0px;
+  top: 0;
+  background: #ff2c57;
+  transition: 0.4s;
+}
+
+$line_before_height: 50%;
+$line_after_height: 100%;
+
+.title::before {
+  @include lines_before();
+}
+
+.title::after {
+  @include lines_after();
+}
+
+.title:hover::before {
+  height: $line_before_height;
+}
+
+.title:hover::after {
+  height: $line_after_height;
+}
+
+@mixin video_btn {
+  content: "";
+  position: absolute;
+  left: 35px;
+  bottom: -52px;
+  width: 87px;
+  height: 87px;
+  transition: all 200ms;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+  border: 10px solid #fff;
+}
+
+.video_btn a::before,
+.video_btn a::after {
+  @include video_btn();
+}
+
+.video_btn a::after {
+  width: 70px;
+  height: 70px;
+  bottom: -35px;
+  border: 10px solid #fff;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.card_introduction:hover {
+  i,
+  h1,
+  p {
+    color: white;
+  }
+
+  span {
+    color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.ctr_area {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../../assets/img/sample/ctr-bg.jpg");
+}
+
+.facts {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/sample/funfact-bg.jpg");
+}
+
+.team_member:hover {
+  transition: 0.4s;
+  .team_content {
+    bottom: 34%;
+    background: transparent;
+    h1 {
+      color: white;
+    }
+    span {
+      color: white;
+    }
+  }
+
+  .social {
+    opacity: 1;
+    ul {
+      transform: translateY(0);
+    }
+  }
+}
+
+.social {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 20%,
+    rgba(0, 0, 0, 0.3) 80%
+  );
+}
+
+.work_section {
+  background-image: url("../img/sample/dott.jpg");
+}
+
+.service_img::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.66;
+}
+
+.service_card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  border-right: 2px solid #ff2c57;
+  height: 50px;
+  border-bottom: 2px solid #ff2c57;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.service_card:hover::before {
+  opacity: 1;
+  width: 100%;
+  height: 50%;
+}
+
+.service_card:hover {
+  .service_icon i {
+    background-color: white;
+    color: #ff2c57;
+  }
+}
+
+.difference_tab input:checked + label {
+  border-color: #ff2c57;
+  background: #ff2c57;
+  color: #ffffff;
+}
+
+.shorting_img::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 95%;
+  height: 93%;
+  background: #000000;
+  left: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.shorting_img:hover::before {
+  top: 21px;
+  width: 93%;
+  height: 91%;
+  left: 21px;
+  opacity: 0.66;
+  visibility: visible;
+}
+
+.shorting_img:hover {
+  .content {
+    @media only screen and (max-width: 767px) {
+      bottom: 0px;
+      opacity: 1;
+      transition: 0.4s;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      bottom: 10px;
+    }
+    bottom: 35px;
+    opacity: 1;
+    transition: 0.4s;
+
+    a:hover {
+      color: #ff2c57;
+    }
+
+    a {
+      opacity: 1;
+      transition: 0.4s;
+    }
+  }
+
+  .content_link {
+    opacity: 1;
+    top: 36px;
+  }
+}
+
+.pricing_table {
+  background-image: url("../img/sample/patt.png");
+}
+
+.pricing_table::after {
+  content: "";
+  width: 70px;
+  height: 30px;
+  background: #ff2c57;
+  margin: 0 auto;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.testimonials_card {
+  .cards:hover {
+    background-color: #ff2c57;
+    background-image: none;
+    transform: translateX(5px);
+
+    h4,
+    h5,
+    p {
+      color: white;
+    }
+    span {
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.single_blog_item::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.single_blog_item:hover::before {
+  background-color: black;
+  opacity: 0.66;
+}
+
+.single_blog_item:hover {
+  .read_more_news {
+    background-color: #ff2c57;
+    color: white;
+    transition: 0.5s;
+  }
+
+  span,
+  h4,
+  p {
+    color: white;
+    transition: 0.5s;
+  }
+}

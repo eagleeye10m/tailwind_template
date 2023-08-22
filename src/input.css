@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  span {
+    @apply text-r_color;
+  }
+
+  .row {
+    @apply flex flex-wrap mx-[-15px];
+  }
+
+  p {
+    @apply xxl:text-[16px] l:text-[15px] md:text-[14px] leading-[1.8];
+  }
+
+  .button_main {
+    @apply border border-[1px] px-5 py-2 text-white rounded-full transition hover:bg-r_color  hover:border-r_color duration-300;
+  }
+
+  .continue_btn {
+    @apply bg-r_color py-[10px] px-[25px] rounded-full text-white border border-r_color hover:bg-white hover:text-r_color hover:border-r_color duration-300 md:text-[14px] l:text-[16px];
+  }
+
+  .title,
+  .skills_title {
+    @apply relative flex flex-col gap-4 h-auto mb-[60px] font-[irsans3] px-[30px] md:gap-[8px] md:mb-[40px];
+  }
+
+  .title p {
+    @apply text-g_color  md:w-full l:w-full;
+  }
+
+  .title h4 {
+    @apply text-r_color text-lg md:text-[16px];
+  }
+
+  .title h1 {
+    @apply text-4xl md:text-[28px] leading-[1.3];
+  }
+
+  .card_devides {
+    @apply w-1/3 px-[15px] l:w-1/2  md:w-full;
+  }
+
+  .card_design,
+  .card_introduction,
+  .card_works {
+    @apply flex flex-col relative gap-5 mb-[30px] md:gap-4 items-center justify-center h-auto shadow-boxes px-[20px] py-[30px]  duration-500 hover:shadow-none hover:translate-x-1.5 overflow-hidden hover:overflow-hidden bg-white;
+  }
+
+  .card_design i {
+    @apply text-[2.5rem] text-r_color md:text-[32px];
+  }
+
+  .read_more {
+    @apply flex justify-center items-center absolute opacity-0  left-0 bottom-[-20px]  w-[45px] h-[40px] bg-transparent  duration-300  rounded-tr-3xl;
+  }
+
+  .card_design p,
+  .service_card p {
+    @apply text-g_color text-center;
+  }
+
+  .card_design a i {
+    @apply text-lg text-white;
+  }
+
+  .section_options i,
+  .difference_text i,
+  .pricing_content i {
+    @apply ml-[5px] text-r_color;
+  }
+
+  .section_ul {
+    @apply flex flex-col gap-2 text-base font-[irsans3] l:text-[15px] md:text-[14px];
+  }
+
+  .card_introduction {
+    @apply items-start hover:bg-r_color md:py-[35px] md:px-[20px]  duration-500 h-auto px-[30px] py-[50px] rounded-md;
+  }
+
+  .card_introduction:hover div {
+    @apply text-white;
+  }
+
+  .card_introduction p,
+  .card_works p {
+    @apply text-g_color duration-300;
+  }
+  .card_design h1 {
+    @apply text-xl font-[irsans1] mt-4 text-[#212529] md:text-[18px];
+  }
+
+  .card_introduction h1,
+  .card_works h1 {
+    @apply text-[22px] font-[irsans3] duration-300 md:text-[18px] text-text_color;
+  }
+
+  .card_introduction span {
+    @apply absolute text-[200px] text-numbers_color bottom-0 left-[1rem] leading-[180px] duration-300;
+  }
+
+  .card_introduction i {
+    @apply text-[2.7rem] text-r_color md:text-[35px] duration-300;
+  }
+
+  .workSectionCards {
+    @apply w-1/3 px-[15px];
+  }
+
+  .card_works {
+    @apply items-start  hover:shadow-boxes p-[35px] md:p-[30px] rounded-md;
+  }
+
+  .card_works h3 {
+    @apply text-5xl text-r_color font-[irsans1] md:text-[35px];
+  }
+
+  .progress {
+    @apply mb-[25px] font-[irsans2] bg-white rounded-l-lg;
+  }
+
+  .progress_title {
+    @apply text-right mb-2 text-[#212529];
+  }
+
+  .progress_bar {
+    @apply relative bg-r_color h-[10px] rounded-lg;
+  }
+
+  .progress_value {
+    @apply absolute left-0 bottom-[18px] font-[irsans3];
+  }
+
+  .fun_box {
+    @apply w-1/4 px-[15px] l:w-1/2 md:w-full;
+  }
+
+  .fun_fact {
+    @apply pr-[65px] text-5xl relative text-white font-[irsans1] l:mb-[30px];
+  }
+
+  .fun_fact i {
+    @apply text-r_color text-5xl absolute right-[-4px] pl-4 md:text-[35px] md:right-0;
+  }
+
+  .fun_fact h1 {
+    @apply md:text-[30px] mb-[5px];
+  }
+
+  .fun_fact p {
+    @apply text-lg font-[irsans3] md:text-[16px];
+  }
+
+  .video_btn {
+    @apply h-[70px] w-full absolute top-[50%] text-center mt-[-36px];
+  }
+
+  .video_btn a {
+    @apply inline-block w-[70px] h-[70px]  bg-r_color rounded-full text-white relative leading-[84px];
+  }
+
+  .team_devides {
+    @apply w-[380px] xl:w-[480px] l:w-[360px] md:w-[540px] float-right ml-0 px-[15px];
+  }
+
+  .team_member {
+    @apply relative;
+  }
+
+  .team_content {
+    @apply text-center pt-[20px] absolute w-[92%] bg-white bottom-0 right-3 left-3 z-10 duration-500;
+  }
+
+  .team_content h1 {
+    @apply font-[irsans1] text-xl text-[#212529] duration-500;
+  }
+
+  .social {
+    @apply w-full h-full absolute top-0 text-center opacity-0 duration-500;
+  }
+
+  .social ul {
+    @apply absolute right-0 left-0 top-[40%] flex justify-center gap-1 translate-y-[-35px] duration-500;
+  }
+  .social ul i,
+  .footer_exp ul i {
+    @apply w-[35px] h-[35px] rounded-full border  border-white hover:bg-r_color hover:border-r_color focus:bg-r_color focus:border-r_color duration-300 flex justify-center items-center text-white leading-8;
+  }
+
+  .service_card {
+    @apply relative shadow-service_boxes mb-[30px] hover:shadow-none hover:translate-x-1 duration-300;
+  }
+
+  .service_card .service_content {
+    @apply py-[30px] px-[25px] text-center;
+  }
+
+  .service_img {
+    @apply relative;
+  }
+
+  .service_icon {
+    @apply absolute flex justify-center w-full top-[35%] left-0;
+  }
+
+  .service_icon i {
+    @apply text-[25px] text-white w-[70px] h-[70px] border rounded-full border-white flex items-center justify-center duration-300;
+  }
+
+  .difference_tab label {
+    @apply inline-block md:block py-[15px] px-[32px] l:py-[14px] l:px-[15px] border border-gray-300 rounded-md mr-[6px] l:mr-[2px] md:mb-[5px] text-[18px] l:text-[16px] text-[#212529] hover:cursor-pointer checked:bg-r_color;
+  }
+
+  .difference_text h4 {
+    @apply mb-[10px] text-[35px] font-[irsans3] text-text_color md:text-[20px];
+  }
+
+  .difference_text p {
+    @apply text-g_color md:w-full l:w-full;
+  }
+
+  .panel .textarea {
+    @apply w-1/2 px-[15px] md:w-full px-[15px];
+  }
+
+  .panel .img_area {
+    @apply w-1/2 px-[15px] mt-[58px] md:w-full md:mt-[35px];
+  }
+
+  .shorting_menu .filter {
+    @apply py-[9px] px-[24px] md:py-[8px] md:px-[22px] md:mb-[7px] bg-[#f4f4f4] text-[16px] md:text-[14px] text-text_color cursor-pointer duration-300 rounded-full hover:bg-r_color hover:text-white;
+  }
+
+  .shorting_menu .active {
+    @apply bg-r_color text-white;
+  }
+
+  .shorting_img {
+    @apply w-1/3 p-[5px] relative l:w-1/2 l:p-0 md:w-full md:p-0 l:hover:before:w-[100%] l:hover:before:h-[100%] l:hover:before:top-0 l:hover:before:left-0;
+  }
+
+  .shorting_img img {
+    @apply md:w-[100%];
+  }
+
+  .shorting_img .content {
+    @apply absolute opacity-0 w-[86%] py-[20px] flex flex-col items-center justify-center bg-white bottom-[20px] left-[40px] lg:w-[100%] lg:bottom-0 lg:left-0 md:bottom-[-95px] duration-500;
+  }
+
+  .shorting_img .content_link {
+    @apply absolute w-[45px] h-[45px] opacity-0 flex items-center justify-center rounded-full top-[20px] left-[40px] text-white font-[irsans1] text-2xl border border-white hover:bg-r_color hover:border-r_color duration-300;
+  }
+
+  .tab {
+    @apply px-[15px] w-1/3 l:w-1/2 md:w-full;
+  }
+
+  .pricing_table {
+    @apply shadow-service_boxes text-center py-[30px] md:py-[20px] relative hover:translate-x-1 duration-300 mb-[30px] md:after:top-[65px];
+  }
+
+  .price_title {
+    @apply py-[20px] bg-r_color text-2xl text-white mb-[35px] md:mb-[30px] md:text-[18px] md:py-[18px] md:leading-[1];
+  }
+
+  .pricing_table .price_value {
+    @apply text-r_color mb-[25px];
+  }
+
+  .pricing_table .amount {
+    @apply text-5xl inline-block md:text-[30px];
+  }
+
+  .pricing_table .currency {
+    @apply text-2xl align-top inline-block md:text-[18px];
+  }
+
+  .pricing_content {
+    @apply border-y-2 border-[#eeeeee] text-[#8b8b8b] py-[25px] mb-[30px] md:text-[14px];
+  }
+
+  .pricing_content li {
+    @apply mt-[16px];
+  }
+
+  .card_header i {
+    @apply float-left leading-[unset];
+  }
+
+  .card_header a.collapsed h5 {
+    @apply bg-transparent text-black duration-500 hover:text-white;
+  }
+
+  .card_header a h5 {
+    @apply my-0 p-4 bg-r_color text-white hover:bg-r_color md:text-[15px] md:p-[10px];
+  }
+
+  .accordion .card {
+    @apply flex flex-col bg-transparent mb-[5px] border shadow-service_boxes rounded-lg last:mb-0;
+  }
+
+  .faq_img {
+    @apply bg-[url('../assets/img/sample/faq-img.jpg')] bg-center l:hidden;
+  }
+
+  .testimonials_card {
+    @apply w-1/3 px-[15px] l:w-1/2  md:w-full;
+  }
+
+  .testimonials_card .cards {
+    @apply relative text-right p-[30px] bg-[url('../assets/img/sample/patt.png')]  shadow-service_boxes text-g_color duration-500 mb-[30px] rounded-md md:p-[20px];
+  }
+
+  .testimonials_card .cards span {
+    @apply absolute text-[rgba(0,0,0,0.03)] text-[200px] bottom-0 left-[20px]  leading-[0px] duration-300 md:text-[100px] md:right-[15px];
+  }
+
+  .client_info {
+    @apply relative pr-[100px] pt-[15px] mb-[35px] md:pt-[19px];
+  }
+
+  .client_img {
+    @apply absolute top-0 right-0 max-w-[80px];
+  }
+
+  .client_title h4 {
+    @apply text-lg text-[rgb(0,0,0)] duration-500 md:text-[16px];
+  }
+
+  .client_title h5 {
+    @apply text-[15px] mt-[7px] duration-500 md:text-[12px] md:mt-0;
+  }
+
+  .testimonials_card .cards p {
+    @apply leading-[1.7]  text-[16px] duration-500 text-[13px];
+  }
+
+  .owl_items {
+    @apply relative w-[380px] ml-[0px] px-[15px] block float-right l:w-[360px] md:w-[540px] xl:w-[480px];
+  }
+
+  .single_blog_item {
+    @apply relative p-[30px] border border-[rgb(238,238,238)]  bg-center bg-cover overflow-hidden;
+  }
+
+  .single_blog_item p {
+    @apply leading-[1.7]  text-[16px] relative text-gray-600;
+  }
+
+  .single_blog_item span {
+    @apply relative text-[#212529] text-[14px] text-base;
+  }
+
+  .single_blog_item h4 {
+    @apply relative my-[15px] text-[20px] hover:text-r_color;
+  }
+
+  .read_more_news {
+    @apply flex justify-center items-center absolute  left-0 bottom-0 w-[45px] h-[40px] duration-300  rounded-tr-3xl shadow-read_more font-black  text-black;
+  }
+
+  .owl_dot span {
+    @apply block w-[15px] h-[15px] mx-[4px] rounded-full border  border-gray-300 hover:bg-r_color hover:cursor-pointer hover:border-r_color duration-300;
+  }
+
+  .active span {
+    @apply w-[35px] h-[11px] bg-r_color rounded-md border-r_color;
+  }
+
+  .info li {
+    @apply relative pr-[60px] mb-[34px] last:mb-0 text-[1rem] md:text-[14px];
+  }
+
+  .info li i {
+    @apply flex justify-center items-center text-r_color absolute right-0 top-[-11px] w-[45px] h-[45px] rounded-full bg-g_back;
+  }
+
+  .info a {
+    @apply hover:text-r_color duration-300;
+  }
+
+  .formGroup {
+    @apply px-[15px] w-full mb-[1rem];
+  }
+
+  .formGroup label {
+    @apply inline-block mb-[8px] text-text_color md:text-[14px] text-text_color;
+  }
+
+  .formGroup input {
+    @apply block h-[45px] w-full outline-0 border border-gray-200 p-[10px] rounded-full;
+  }
+
+  .footer_exp li {
+    @apply inline-block;
+  }
+}
+
+@layer base {
+  .container {
+    @apply xxl:max-w-[1140px] xl:max-w-[960px] l:max-w-[720px] md:max-w-[540px] py-[80px] px-[15px] md:py-[50px] mx-auto;
+  }
+}
