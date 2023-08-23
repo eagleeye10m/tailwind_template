@@ -10,7 +10,7 @@
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "scripts": {
-    "vercel-build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
+    "vercel-build": "NODE_ENV=production npx tailwindcss -i ./src/input.css -o ./dist/output.css"
   },
   "author": "",
   "license": "ISC",
